@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    ;
+}
+
+header,
+footer {
+    height: 100px;
+    border: 3px solid green;
+    clear: both;
+}
+
+section {
+    height: 300px;
+    width: 33.333%;
+    border: 3px solid red;
+    float: left;
+}
