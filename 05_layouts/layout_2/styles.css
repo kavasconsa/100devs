@@ -15,10 +15,18 @@ footer {
     clear: both;
 }
 
-.other-section {
+.left-section,
+.right-section {
     height: 200px;
-    width: 50%;
     float: left;
+}
+
+.left-section {
+    width: 30%;
+}
+
+.right-section {
+    width: 70%;
 }
 
 body {
