@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+header,
+section,
+footer {
+    background-color: beige;
+    border: 2px solid black;
+    height: 90px;
+}
+
+.main-section {
+    height: 150px;
+    clear: both;
+}
+
+.other-section {
+    height: 200px;
+    width: 50%;
+    float: left;
+}
+
+body {
+    background-color: blanchedalmond;
+}
+
+footer {
+    clear: both;
+}
