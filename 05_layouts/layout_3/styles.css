@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+header,
+article,
+aside,
+section,
+footer {
+    border: 1px solid blueviolet;
+}
+
+header,
+footer {
+    height: 90px;
+    position: inherit;
+    clear: both;
+}
+
+aside,
+article,
+section {
+    height: 200px;
+    float: left;
+    border-width: 0.5px;
+}
+
+aside,
+section {
+    width: 20%;
+}
+
+article {
+    width: 40%;
+}
