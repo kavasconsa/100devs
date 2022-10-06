@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        background-color: lightgreen;
+        padding: 10px;
+        height: 90vh;
+    }
+    .original{
+        border: 1px dotted gray;
+        background-color: lightgray;
+        height: 70px;
+        width: 70px;
+        text-align: center;
+        align-self: center;
+        margin: 10px;
+    }
+    .child1{
+        border: 1px solid rgb(248, 3, 3);
+        background-color: rgb(9, 9, 9);
+        height: 70px;
+        width: 70px;
+        text-align: center;
+        align-self: center;
+        margin-left: -1px;
+        margin-top: -1px;
+    }
+    .child2{
+        border: 1px solid rgb(248, 3, 3);
+        background-color: rgb(240, 235, 87);
+        height: 70px;
+        width: 70px;
+        text-align: center;
+        align-self: center;
+        margin-left: -1px;
+        margin-top: -1px;
+    }
+    .child3{
+        border: 1px solid rgb(248, 3, 3);
+        background-color: rgb(2, 2, 2);
+        height: 70px;
+        width: 70px;
+        text-align: center;
+        align-self: center;
+        margin-left: -1px;
+        margin-top: -1px;
+    }
+    h1{
+        color: rgb(96, 76, 226);
+    }
+    p{
+        color: rgb(36, 43, 176);
+    }
+    h5{
+        color:rgb(115, 35, 112);
+        align-self: center;
+        text-align: center;
+    }
+    .relative{
+        position: relative;
+        left: 10px;
+        top: 10px;
+    }
+
+    .absolute{
+        position: absolute;
+    }
+    .absolute-box-container{
+        display: flex;
+    }
+    .absolute-1{
+        margin: 5px;
+        height: 350px;
+        width: 150px;
+        background-color: rgb(236, 201, 158);
+    }
+    .absolute-2{
+        margin: 5px;
+        height: 350px;
+        width: 150px;
+        background-color: rgb(236, 201, 158);
+        position: relative;
+    }
+    .child2-absolute1{
+        position:absolute;
+    }
+    .child2-absolute2{
+        position:absolute;
+        top: 150px;
+        left: 50px;
+    }
+</style>
+<body>
+    <div class="parent">
+        <div class="original">
+            <div class="child1"></div>
+        </div>
+        <div class="original">
+            <div class="child2"></div>
+        </div>
+        <div class="original">
+            <div class="child3"></div>
+        </div>
+        <div class="explanation-box">
+            <h1>Position Static</h1>
+            <p>The placement properties top , left , bottom and right do not affect an element that has position: static . </p>
+        </div>
+    </div><br>
+    <div class="parent">
+        <div class="original">
+            <div class="child1"></div>
+        </div>
+        <div class="original">
+            <div class="child2 relative"></div>
+        </div>
+        <div class="original">
+            <div class="child3"></div>
+        </div>
+        <div class="explanation-box">
+            <h1>Position Relative</h1>
+            <p>Relative position means that an element is positioned relative to its original position in the normal flow. By setting an element to just have position:
+                relative nothing will happen. We will need to use the placement properties to change how the element is positioned relative to its original position.</p>
+            <p>The element remains in the <b>normal flow</b> of the document and the offset is applied relative to its original position.</p>
+        </div>
+    </div><br>
+    <div class="parent">
+        <div class="absolute-box-container">
+            <div class="absolute-1">
+                <h5>Yellow box is absolute <br> Orange box is static.</h5>
+                <div class="original">
+                    <div class="child1"></div>
+                </div>
+                <div class="original">
+                    <div class="child2 child2-absolute1"></div>
+                </div>
+                <div class="original">
+                    <div class="child3"></div>
+                </div>
+            </div>
+            <div class="absolute-2">
+                <h5>Yellow box is absolute <br> Orange box is relative.</h5>
+                <div class="original">
+                    <div class="child1"></div>
+                </div>
+                <div class="original">
+                    <div class="child2 child2-absolute2"></div>
+                </div>
+                <div class="original">
+                    <div class="child3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="explanation-box">
+            <h1>Position Absolute</h1>
+            <p>Absolute positioned elements are removed from the normal document flow, and the space that the element was originally occupying is no longer reserved for that element.</p>
+            <p>When the element is given position: absolute all other elements behave as if that element is no longer in the document. Therefore, there is no space reserved for that element in the page layout. </p>
+            <p>An important point and something that stumped me when I was learning is that an element with position: absolute is positioned relative to its closest positional ancestor. What this means is that for absolute positioning to work, the parent element must have a position property value other than the default of static.</p>
+            <p>This is a crucial point to take note of, because if the closest parent element does not have a position property, the element with the absolute position will position relative to the next parent element that has a position property value. If there is no element with a position property value the element will be positioned relative to the html or viewport element. </p>
+        </div>
+    </div>
+</body>
+</html>
