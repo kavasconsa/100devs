@@ -76,13 +76,20 @@ main>img {
 }
 
 
-section>div p img {
+section>div {
   float: left;
-  width: 23%;
+  width: 33%;
+}
+
+section>p {
+  float: left;
+  width: 33%;
+  margin: 0;
 }
 
 section>img {
-  width: 60%;
+  width: 33%;
+  float: left;
 }
 
 
