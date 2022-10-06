@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+header,
+section,
+footer {
+    border: 3px solid gray;
+}
+
+header,
+footer {
+    height: 100px;
+    clear: both;
+}
+
+
+section {
+    height: 300px;
+    float: left;
+    width: 33.33%;
+}
+
+/*---PHONE---*/
+@media screen and (max-width: 500px) {
+    section {
+        width: 100%;
+    }
+
+}
+
+/*--TABLET---*/
+@media (min-width: 501px) and (max-width: 900px) {
+    section {
+        width: 50%;
+    }
+
+    .side-section {
+        height: 150px;
+    }
+
+
+}

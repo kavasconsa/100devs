@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+header,
+section,
+footer {
+    background-color: beige;
+    border: 2px solid black;
+    height: 90px;
+}
+
+.main-section {
+    height: 150px;
+    clear: both;
+}
+
+.left-section,
+.right-section {
+    height: 200px;
+    float: left;
+}
+
+.left-section {
+    width: 30%;
+}
+
+.right-section {
+    width: 70%;
+}
+
+body {
+    background-color: blanchedalmond;
+}
+
+footer {
+    clear: both;
+}
+
+
+/*---PHONE---*/
+@media screen and (max-width: 500px) {
+    .main-section {
+        width: 100%;
+    }
+
+    .left-section,
+    .right-section {
+        width: 50%;
+    }
+
+}
